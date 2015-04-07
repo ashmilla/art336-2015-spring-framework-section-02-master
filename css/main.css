@@ -483,6 +483,26 @@ img {
   max-width: 100%;
   vertical-align: bottom; }
 
+body {
+  font-family: "adobe-garamond-pro", "georgia", serif;
+  font-style: normal;
+  font-weight: 400; }
+
+h1, h2, h3 {
+  font-family: "league-gothic", "verdana" , sans-serif;
+  font-style: normal;
+  font-weight: 400; }
+
+i, em {
+  font-family: "adobe-garamond-pro", "georgia", serif;
+  font-style: italic;
+  font-weight: 400; }
+
+b, strong {
+  font-family: "adobe-garamond-pro", "georgia", serif;
+  font-style: normal;
+  font-weight: 700; }
+
 /* Layout.scss */
 @media screen and (min-width: 550px) and (max-width: 1140px) {
   .row.gallery [class^="col-"] {
