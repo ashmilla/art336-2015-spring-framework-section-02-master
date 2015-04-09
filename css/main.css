@@ -97,6 +97,11 @@
 .outer .row:last-of-type [class^="col-"] {
   margin-bottom: 0; }
 
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 100; }
+
 .vcenter {
   width: 100%;
   /* Firefox needs this */
@@ -118,6 +123,83 @@
   display: box;
   box-pack: center;
   box-align: center; }
+
+/* Nav.scss */
+@media screen and (max-width: 768px) {
+  .row .fixed-nav {
+    position: absolute;
+    top: 0; } }
+.menu {
+  line-height: 1em; }
+  @media screen and (min-width: 768px) {
+    .menu {
+      margin-top: 10px; } }
+
+.menu ul {
+  transition: max-height 400ms linear;
+  margin: 0;
+  padding: 0; }
+  @media screen and (max-width: 768px) {
+    .menu ul {
+      text-align: center;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85); } }
+
+.menu li {
+  transition: visibility 400ms linear;
+  display: inline-block; }
+
+@media (max-width: 768px) {
+  .menu ul {
+    max-height: 0;
+    overflow: hidden;
+    margin: 0; }
+
+  .menu li:first-of-type {
+    margin-top: 24px; }
+
+  .menu li:last-of-type {
+    margin-bottom: 10px; }
+
+  .menu li {
+    visibility: hidden;
+    display: block;
+    padding: 0.5em 0.6em;
+    border: none; }
+
+  .menu .navbar-handle {
+    display: block; }
+
+  #navbar-checkbox:checked + .menu ul {
+    max-height: 100vh; }
+
+  #navbar-checkbox:checked + .menu li {
+    visibility: visible; }
+
+  #navbar-checkbox:checked + .menu .navbar-handle,
+  #navbar-checkbox:checked + .menu .navbar-handle:after,
+  #navbar-checkbox:checked + .menu .navbar-handle:before {
+    border-color: #aaa; } }
+.navbar-checkbox {
+  display: none; }
+
+.navbar-handle {
+  display: none;
+  cursor: pointer;
+  position: relative; }
+
+#navbar-checkbox + .menu .navbar-handle:before {
+  content: "Menu"; }
+
+#navbar-checkbox:checked + .menu .navbar-handle:before {
+  content: "Close"; }
+
+.menu .navbar-handle {
+  position: absolute;
+  font-size: 1.2em;
+  top: 0.7em;
+  right: 12px;
+  z-index: 10; }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -535,6 +617,12 @@ b, strong {
 .banner-title h2 {
   font-size: 2em;
   margin: 0; }
+
+.logo-background {
+  fill: pink; }
+
+.logo-eye {
+  fill: red; }
 
 /* State.scss */
 
