@@ -90,6 +90,50 @@
 
   .row-no-gutter .col-12 {
     width: 100%; } }
+@media screen and (min-width: 768px) {
+  .row .col-1.center {
+    width: 8.33333333%;
+    margin-left: calc(91.6666666666% / 2); }
+
+  .row .col-2.center {
+    width: 16.66666666%;
+    margin-left: calc(83.333333333% / 2); }
+
+  .row .col-3.center {
+    width: 25%;
+    margin-left: calc(75% / 2); }
+
+  .row.col-4.center {
+    width: 33.33333333%;
+    margin-left: calc(66.6666666666% / 2); }
+
+  .row .col-5.center {
+    width: 41.66666666%;
+    margin-left: calc(58.333333333% / 2); }
+
+  .row .col-6.center {
+    width: 50%;
+    margin-left: calc(50% / 2); }
+
+  .row .col-7.center {
+    width: 58.33333333%;
+    margin-left: calc(41.6666666% / 2); }
+
+  .row .col-8.center {
+    width: 66.66666666;
+    margin-left: calc(33.3333333% / 2); }
+
+  .row .col-9.center {
+    width: 75%;
+    margin-left: calc(25% / 2); }
+
+  .row .col-10.center {
+    width: 83.33333333%;
+    margin-left: calc(16.666666666% / 2); }
+
+  .row .col-11.center {
+    width: 91.66666666%;
+    margin-left: calc(8.3333333333% / 2); } }
 .outer {
   width: 100%;
   margin-bottom: 14px; }
@@ -570,7 +614,7 @@ body {
   font-style: normal;
   font-weight: 400; }
 
-h1, h2, h3 {
+h1, h2, h3, .headline {
   font-family: "league-gothic", "verdana" , sans-serif;
   font-style: normal;
   font-weight: 400; }
@@ -599,14 +643,12 @@ b, strong {
   background: url("../img/seattle-lowrez.jpg") top center no-repeat;
   background-size: cover;
   height: 70%;
-  height: 70vh;
-  text-align: center; }
+  height: 70vh; }
 
 .banner-title {
   background-color: #fff;
   border-radius: 8px;
   color: #262626;
-  display: inline-block;
   line-height: 1;
   padding: 8px; }
 
@@ -623,6 +665,9 @@ b, strong {
 
 .logo-eye {
   fill: red; }
+
+.info-seattle, .info-links {
+  background-color: rebeccapurple; }
 
 /* State.scss */
 
