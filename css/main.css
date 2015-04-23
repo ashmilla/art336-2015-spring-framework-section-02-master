@@ -614,6 +614,112 @@ body {
   z-index: 9999;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0); }
 
+/*
+* Pure CSS Components - http://www.felipefialho.com/css-components/
+* Author: Luiz Felipe Tartarotti Fialho
+* hi@felipefialho.com
+* http://www.felipefialho.com/
+*/
+.btn {
+  cursor: pointer; }
+
+.modal .btn-close {
+  color: #aaaaaa;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.modal .btn-close svg {
+  fill: #8a8a8a;
+  transition: fill 400ms linear;
+  margin: 4px;
+  height: 22px;
+  width: 22px; }
+
+.modal .btn-close svg:hover {
+  fill: #242424;
+  transition: fill 400ms linear; }
+
+.modal-wrap:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101; }
+
+.modal-overlay {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 102; }
+
+.modal-open:checked ~ .modal-wrap:before,
+.modal-open:checked ~ .modal-wrap .modal-overlay {
+  display: block; }
+
+.modal-open:checked ~ .modal-wrap .modal-dialog {
+  transform: translate(-50%, 0);
+  top: 20%; }
+
+.modal-overlay {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 102; }
+
+.modal-dialog {
+  background: #fefefe;
+  border: #555555 solid 1px;
+  border-radius: 5px;
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  width: 80%;
+  max-width: 600px;
+  z-index: 103;
+  padding: 0 6px 6px 6px; }
+
+.untoggler {
+  display: none; }
+
+.toggler:target ~ .untoggler {
+  display: block; }
+
+.toggler:target {
+  display: none; }
+
+.toggler:before, .untoggler:before {
+  margin-left: 5px;
+  width: 20px;
+  display: inline-block; }
+
+.toggler ~ div {
+  display: none; }
+
+.toggler ~ div.animate {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms ease-in-out; }
+
+.toggler:target ~ div {
+  display: block; }
+
+.toggler:target ~ div.animate {
+  max-height: 100vh; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -997,6 +1103,13 @@ b, strong {
   font-family: "adobe-garamond-pro", "georgia", serif;
   font-style: normal;
   font-weight: 700; }
+
+a, .btn, .toggle, .untoggler {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 300ms linear; }
+  a:hover, .btn:hover, .toggle:hover, .untoggler:hover {
+    color: #cccccc; }
 
 /* Layout.scss */
 @media screen and (min-width: 550px) and (max-width: 1140px) {
